@@ -95,3 +95,41 @@ MAPI=1
 ![image](https://user-images.githubusercontent.com/58542375/174107409-e3e199de-be90-45ed-8247-49329ab31746.png)
 
 ![image](https://user-images.githubusercontent.com/58542375/174108235-f3dd51f4-39c1-42f3-95ee-02d8c618389e.png)
+
+## Task 6 Remote File Inclusion - RFI
+*include* function
+
+*allow_url_fopen* **ON**
+
+![image](https://user-images.githubusercontent.com/58542375/174110626-b5e9ddf9-5feb-4c83-8c20-5353495f4ade.png)
+
+`http://10.10.90.61/playground.php`
+
+![image](https://user-images.githubusercontent.com/58542375/174111739-a9821e44-05ee-4d1d-aad0-5c07d2d04523.png)
+
+## Task 7 Remediation
+1. Keep system and services, including web application frameworks, updated with the latest version.
+2. Turn off PHP errors to avoid leaking the path of the application and other potentially revealing information.
+3. A Web Application Firewall (WAF) is a good option to help mitigate web application attacks.
+4. Disable some PHP features that cause file inclusion vulnerabilities if your web app doesn't need them, such as allow_url_fopen on and allow_url_include.
+5. Carefully analyze the web application and allow only protocols and PHP wrappers that are in need.
+6. Never trust user input, and make sure to implement proper input validation against file inclusion.
+7. Implement whitelisting for file names and locations as well as blacklisting.
+
+## Task 8 Challenge
+### Steps for testing for LFI
+1. Find an entry point that could be via GET, POST, COOKIE, or HTTP header values!
+2. Enter a valid input to see how the web server behaves.
+3. Enter invalid inputs, including special characters and common file names.
+4. Don't always trust what you supply in input forms is what you intended! Use either a browser address bar or a tool such as Burpsuite.
+5. Look for errors while entering invalid input to disclose the current path of the web application; if there are no errors, then trial and error might be your best option.
+6. Understand the input validation and if there are any filters!
+7. Try the inject a valid entry to read sensitive files
+
+![image](https://user-images.githubusercontent.com/58542375/174117112-edfab529-9011-4b89-afb5-e505647eba6e.png)
+
+![image](https://user-images.githubusercontent.com/58542375/174117316-381088f6-5959-4828-adfc-eaeea70ff437.png)
+
+![image](https://user-images.githubusercontent.com/58542375/174117671-f23dd830-330f-44ee-acdc-d1433b9acbc5.png)
+
+![image](https://user-images.githubusercontent.com/58542375/174117968-e42c81f6-48ed-4c1f-a855-3ec8a3b8f1c1.png)
